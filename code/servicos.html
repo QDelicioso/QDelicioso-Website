@@ -4,123 +4,21 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>QDelicioso</title>
-
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="../css/styles.css">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-  font-family:"Montserrat",sans-serif;
-  background:#f5f3ef;
-  color:#000000;
-}
-
-/* HEADER */
-header{
-  background:#6f8f6b;
-  border-bottom:4px solid #d4c45a;
-  position:relative;
-  z-index:1000;
-}
-
-/* NOVA ESTRUTURA */
-.header-container{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:40px;
-}
-
-/* LOGO */
-.logo-container{
-  display:flex;
-  align-items:center;
-  padding:10px 20px;
-}
-
-.logo{
-  height:120px;
-}
-
-/* DIREITA */
-.header-right{
-  width: 60%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-/* SLOGAN */
-.slogan{
-  background:#e9e4d8;
-  color:#6f8f6b;
-  text-align:center;
-  padding:20px;
-  font-size:24px;
-  letter-spacing:2px;
-  box-shadow:0 3px 6px rgba(0,0,0,0.2);
-  width:100%;
-  max-width:800px;
-  margin:10px auto;
-}
-
-/* MENU DESKTOP */
-nav{
-  padding-bottom:10px;
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  width:100%;
-}
-
-nav a{
-  color:white;
-  text-decoration:none;
-  font-size:14px;
-  letter-spacing:1px;
-  transition:0.3s;
-}
-
-nav a:hover{
-  opacity:0.7;
-}
-
-/* HAMBURGER */
-.menu-toggle{
-  display:none;
-  position:absolute;
-  right:20px;
-  top:20px;
-  font-size:28px;
-  color:white;
-  cursor:pointer;
-}
-
-/* OVERLAY */
-.overlay{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-  opacity:0;
-  visibility:hidden;
-  transition:0.3s;
-  z-index:900;
-}
-
-.overlay.active{
-  opacity:1;
-  visibility:visible;
-}
-
 /* SECTION BASE */
+.content{
+  display: flex;
+  justify-content: center;
+}
 .pedido{
   padding:80px 20px;
+  max-width: 80%;
 }
 
 /* TÍTULO COM LINHAS */
@@ -139,7 +37,8 @@ nav a:hover{
 }
 
 .title-line h2{
-  font-size:28px;
+    font-size:42px;
+  font-weight:300;
   letter-spacing:2px;
   text-align:center;
 }
@@ -150,11 +49,13 @@ nav a:hover{
   align-items:center;
   justify-content:center;
   gap:60px;
-  max-width:1200px;
   margin:0 auto;
 }
 
 /* TEXTO */
+.pedido-text{
+  width: 80%;
+}
 .pedido-text ul{
   list-style:none;
 }
@@ -185,7 +86,7 @@ nav a:hover{
 /* IMAGEM */
 .pedido-image img{
   width:100%;
-  max-width:500px;
+  max-width:80%;
   border-radius:10px;
 }
 
@@ -200,114 +101,8 @@ nav a:hover{
   letter-spacing:1px;
 }
 
-.cta-bar{
-  background:#6f8f6b;
-  padding:15px 0;
-  margin:40px auto 0;
-  border-top:5px solid #d4c45a;
-  border-bottom:5px solid #d4c45a;
-  max-width:80%;
-}
-
-.cta-bar a{
-  color:white;
-  text-decoration:none;
-  font-size:24px;
-}
-
-.image{
-  max-width:80%;
-  margin:30px auto;
-  display:block;
-}
-
-.bottom{
-  margin-top:20px;
-  font-size:20px;
-}
-
-/* FOOTER */
-.footer{
-  background:#6f8f6b;
-  color:white;
-  padding:30px 20px;
-  margin-top:60px;
-}
-
-.footer-left{
-  max-width:600px;
-  margin-left:10%;
-}
-
-.footer-left p{
-  display:flex;
-  gap:10px;
-}
-
-/* BOTÃO X */
-.close-btn{
-  display:none;
-}
-
 /* MOBILE */
 @media(max-width:768px){
-
-  .header-container{
-    flex-direction:column;
-    align-items:center;
-    gap:0px;
-  }
-
-  .logo{
-    height:70px;
-  }
-
-  .slogan{
-    font-size:16px;
-    margin:10px;
-  }
-
-  nav{
-    position:fixed;
-    top:0;
-    right:-100%;
-    width:75%;
-    height:100%;
-    background:#f5f3ef;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    transition:0.4s;
-    z-index:1001;
-  }
-
-  nav.active{
-    right:0;
-  }
-
-  nav a{
-    color:#6f8f6b;
-    font-size:24px;
-    margin:15px 0;
-  }
-
-  .menu-toggle{
-    display:block;
-  }
-
-  .close-btn{
-    display:block;
-    position:absolute;
-    top:20px;
-    right:20px;
-    font-size:28px;
-    color:#6f8f6b;
-    cursor:pointer;
-  }
-
   .pedido-content{
     flex-direction:column;
     text-align:center;
@@ -318,14 +113,6 @@ nav a:hover{
   }
 
   .title-line h2{
-    font-size:20px;
-  }
-
-  .bottom{
-    font-size:16px;
-  }
-
-  .cta-bar a{
     font-size:20px;
   }
 }
@@ -357,7 +144,7 @@ nav a:hover{
         <a href="produtos.html">Produtos</a>
         <a href="servicos.html">Serviços</a>
         <a href="clientes.html">Clientes</a>
-        <a href="contacto.html">Fale Connosco</a>
+        <a href="contactos.html">Contactos</a>        
       </nav>
     </div>
 
@@ -367,7 +154,7 @@ nav a:hover{
 
   </div>
 </header>
-
+<div class="content">
 <section class="pedido">
 
   <!-- TÍTULO -->
@@ -403,7 +190,7 @@ nav a:hover{
   </div>
 
 </section>
-
+</div>
 <footer class="footer">
   <div class="footer-left">
     <p><i class="fa-solid fa-phone"></i> +351 915 247 608</p>

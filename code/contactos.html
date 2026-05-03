@@ -17,6 +17,84 @@ rel="stylesheet"
 <link rel="stylesheet" href="../css/styles.css">
 
 </head>
+<style>
+.contactos {
+  background: #f9f6ef;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* TÍTULO */
+.contactos h2 {
+  font-family: 'Aboreto', sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contactos h2::before,
+.contactos h2::after {
+  content: "";
+  height: 2px;
+  width: 120px;
+  background: #c9b037;
+}
+
+/* CONTAINER CENTRAL */
+.contactos-info {
+  display: flex;
+  justify-content: center;   /* 👈 CENTRO REAL */
+  gap: 120px;                /* 👈 ESPAÇO IGUAL */
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;            /* 👈 CENTRA TUDO */
+}
+
+/* BLOCO */
+.bloco {
+  width: 250px;
+  text-align: center;
+}
+
+.bloco h3 {
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.bloco p {
+  color: #6f8f6b;
+  margin: 5px 0;
+}
+
+.bloco span {
+  font-size: 12px;
+  color: #888;
+}
+
+/* MORADA (ALINHADA COM OS BLOCOS) */
+.morada {
+  text-align: center;
+  margin: 40px auto 20px;
+  color: #6f8f6b;
+  font-weight: 500;
+  max-width: 1000px; /* 👈 MESMA LARGURA DOS BLOCOS */
+}
+
+/* MAPA */
+.mapa {
+  max-width: 1000px;  /* 👈 ALINHA COM O RESTO */
+  margin: 0 auto;
+}
+
+.mapa iframe {
+  width: 100%;
+  border-radius: 10px;
+}
+</style>
 
 <body>
 <div class="overlay" id="overlay" onclick="closeMenu()"></div>
@@ -51,20 +129,45 @@ rel="stylesheet"
   </div>
 </header>
 <div class="content">
-  <section class="hero">
-    <h1>
-      EMPRESA ESPECIALISTA EM TRANSFORMAÇÃO E EMBALAMENTO DE CHARCUTARIA E
-      QUEIJOS, <br /><b>À MEDIDA DO SEU NEGÓCIO.</b>
-    </h1>
+  <section class="contactos">
+  <div class="contactos-info">
 
-    <div class="cta-bar">
-      <a href="mailto:geral@qdelicioso.pt">Fale Connosco</a>
+    <div class="bloco">
+      <h3>TELEMÓVEL</h3>
+      <p>(+351) 915 247 608</p>
+      <span>(chamada para rede móvel nacional)</span>
     </div>
 
-    <img src="../Images/pagina inicial.png" class="image" />
+    <div class="bloco">
+      <h3>EMAIL</h3>
+      <p>geral@QDelicioso.pt</p>
+      <p>encomendas@QDelicioso.pt</p>
+    </div>
 
-    <div class="bottom">- PERMITA-SE CONHECER O QUE NOS DIFERENCIA -</div>
-  </section>
+    <div class="bloco">
+      <h3>HORÁRIO</h3>
+      <p>09:00h às 19:00h</p>
+      <span>(segunda a sexta dias úteis)</span>
+    </div>
+
+  </div>
+
+  <div class="morada"><b>
+    Rua Timor, lote 125, loja direita 2640-181 Olival Basto
+  </b></div>
+
+  <div class="mapa">
+    <iframe 
+      src="https://www.google.com/maps?q=Rua+Timor,+lote+125,+Olival+Basto&output=embed"
+      width="100%" 
+      height="400" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+</section>
 </div>
 <footer class="footer">
   <div class="footer-left">
