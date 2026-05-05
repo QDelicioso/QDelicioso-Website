@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>QDelicioso</title>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../QDelicioso-Website/css/styles.css">
+<style>
+
+/* SECTION BASE */
+.content{
+  display: flex;
+  justify-content: center;
+}
+
+.processos{
+  padding: 60px 20px;
+  text-align: center;
+  max-width:80%;
+}
+
+/* TÍTULOS COM LINHA */
+.title-line{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  margin:40px 0;
+}
+
+.title-line span{
+  flex:1;
+  height:3px;
+  background:#d4c45a;
+}
+.title-line h1{
+  font-size: 42px;
+  font-weight: 300;
+}
+
+.title-line h2,
+.title-line h3{
+  font-family:'Aboreto', sans-serif;
+  letter-spacing:2px;
+}
+
+/* MENU VERDE */
+.process-menu{
+  background:#6f8f6b;
+  color:white;
+  padding:10px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:40px;
+}
+
+.process-menu span{
+  padding:5px 10px;
+  border-right:1px solid rgba(255,255,255,0.3);
+}
+
+.process-menu span:last-child{
+  border:none;
+}
+
+/* GRID */
+.grid{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:40px;
+  margin:40px 0;
+}
+
+.grid h4{
+  margin-bottom:15px;
+  letter-spacing:1px;
+}
+
+.grid ul{
+  list-style:none;
+  text-align:left;
+}
+
+.grid li{
+  margin:8px 0;
+  color:#6f8f6b;
+}
+
+/* LINHA VERTICAL */
+.divider{
+  width:2px;
+  background:#333;
+  height:150px;
+}
+
+/* BARRA VERDE */
+.green-bar{
+  height:20px;
+  background:#6f8f6b;
+  margin:40px 0;
+}
+
+/* EMBALAMENTO */
+.embalamento{
+  list-style:none;
+  max-width:600px;
+  margin:0 auto;
+  text-align:left;
+}
+
+.embalamento li{
+  margin:10px 0;
+  color:#6f8f6b;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .grid{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .divider{
+    display:none;
+  }
+
+  .process-menu{
+    font-size:14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<header>
+  <div class="header-container">
+
+    <div class="logo-container">
+      <img src="../QDelicioso-Website/logotipos/LOGO BRANCO COM TEXTO.png" class="logo">
+    </div>
+
+    <div class="header-right">
+      <div class="slogan">O ALFAIATE DA CHARCUTARIA</div>
+
+      <nav id="menu">
+        <div class="close-btn" onclick="closeMenu()">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <a href="index.html">Página Inicial</a>
+        <a href="quemSomos.html">Quem Somos</a>
+        <a href="processos.html">Processos</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="contactos.html">Contactos</a>        
+      </nav>
+    </div>
+
+    <div class="menu-toggle" onclick="openMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+  </div>
+</header>
+<div class="content">
+<section class="processos">
+
+  <!-- TÍTULO -->
+  <div class="title-line">
+    <span></span>
+    <h1>OS NOSSOS PROCESSOS</h1>
+    <span></span>
+  </div>
+
+  <!-- MENU VERDE -->
+  <div class="process-menu">
+    <span>Precisão</span>
+    <span>Rigor</span>
+    <span>Eficácia</span>
+    <span>Eficiência</span>
+    <span>Higiene e Segurança</span>
+    <span>Designer e estética</span>
+  </div>
+
+  <!-- SERVIÇOS TRANSFORMAÇÃO -->
+  <div class="title-line">
+    <span></span>
+    <h1>SERVIÇOS DE TRANSFORMAÇÃO</h1>
+    <span></span>
+  </div>
+
+  <div class="grid">
+    <div>
+      <h4>PRODUTO ORIGINAL</h4>
+      <ul>
+        <li>• BARRA</li>
+        <li>• PÊRA</li>
+        <li>• CILINDRO</li>
+        <li>• OUTROS</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <h4>PRODUTO TRANSFORMADO</h4>
+      <ul>
+        <li>• FATIAS</li>
+        <li>• CUBOS</li>
+        <li>• RALADOS</li>
+        <li>• TIRAS</li>
+        <li>• METADES</li>
+        <li>• QUARTOS</li>
+        <li>• OITAVOS</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- BARRA VERDE -->
+  <div class="green-bar"></div>
+
+  <!-- SERVIÇOS EMBALAMENTO -->
+  <div class="title-line">
+    <span></span>
+    <h1>SERVIÇOS DE EMBALAMENTO</h1>
+    <span></span>
+  </div>
+
+  <ul class="embalamento">
+    <li>• EMBALAMENTO À MEDIDA &nbsp;&nbsp; 60G A 3KG</li>
+    <li>• REEMBALAMENTO DE PRODUTOS</li>
+    <li>• SOLUÇÕES PERSONALIZADAS</li>
+  </ul>
+  <img src="../QDelicioso-Website/Images/charcutaria.png" class="image" />
+
+</section>
+</div>
+<footer class="footer">
+  <div class="footer-left">
+    <p><i class="fa-solid fa-phone"></i> +351 915 247 608</p>
+    <p><i class="fa-solid fa-envelope"></i> ENCOMENDAS@QDELICIOSO.PT</p>
+    <p><i class="fa-solid fa-envelope"></i> GERAL@QDELICIOSO.PT</p>
+    <p><i class="fa-solid fa-location-dot"></i> RUA TIMOR, LOTE 125, LOJA DIREITA 2640-181 OLIVAL BASTO</p>
+  </div>
+</footer>
+
+<script>
+function openMenu(){
+  document.getElementById("menu").classList.add("active");
+  document.getElementById("overlay").classList.add("active");
+}
+
+function closeMenu(){
+  document.getElementById("menu").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
+}
+</script>
+
+</body>
+</html>

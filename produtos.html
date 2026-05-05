@@ -9,111 +9,113 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../QDelicioso-Website/css/styles.css">
 <style>
+
 /* SECTION BASE */
 .content{
   display: flex;
   justify-content: center;
 }
-.pedido{
+.materia{
   padding:80px 20px;
   max-width: 80%;
 }
 
-/* TÍTULO COM LINHAS */
-.title-line{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:20px;
+/* TÍTULO */
+.materia-title{
+  text-align:center;
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing:2px;
   margin-bottom:40px;
+  position:relative;
 }
 
-.title-line span{
-  flex:1;
+.materia-title::after{
+  content:"";
+  display:block;
+  width:100%;
   height:3px;
   background:#d4c45a;
-}
-
-.title-line h2{
-    font-size:42px;
-  font-weight:300;
-  letter-spacing:2px;
-  text-align:center;
+  margin-top:15px;
 }
 
 /* LAYOUT */
-.pedido-content{
+.materia-content{
   display:flex;
   align-items:center;
   justify-content:center;
   gap:60px;
+  max-width:1200px;
   margin:0 auto;
 }
 
 /* TEXTO */
-.pedido-text{
-  width: 80%;
-}
-.pedido-text ul{
-  list-style:none;
+.materia-text{
+  flex:1;
 }
 
-.pedido-text li{
-  margin:15px 0;
-  color:#6f8f6b;
+/* BLOCO */
+.block{
+  margin-bottom:40px;
+}
+
+/* TÍTULO COM LINHAS */
+.block-title{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:15px;
+}
+
+.block-title span{
+  flex:1;
+  height:2px;
+  background:#d4c45a;
+}
+
+.block-title h3{
   font-size:18px;
-  position:relative;
-  padding-left:20px;
-  font-weight: 600;
+  letter-spacing:2px;
 }
 
-/* BULLET */
-.pedido-text li::before{
-  content:"•";
-  position:absolute;
-  left:0;
-  color:#d4c45a;
+/* TEXTO */
+.block p{
+  color:#6f8f6b;
+  margin:10px 0;
+  line-height:1.6;
 }
 
-/* SUB TEXTO */
-.sub{
-  margin-left:60px !important;
-  font-size:16px;
+/* LISTA */
+.block ul{
+  list-style:none;
+  margin-top:10px;
+}
+
+.block li{
+  color:#6f8f6b;
+  margin:8px 0;
 }
 
 /* IMAGEM */
-.pedido-image img{
-  width:100%;
-  max-width:80%;
-  border-radius:10px;
+.materia-image{
+  flex:1;
 }
 
-/* FRASE FINAL */
-.pedido-footer{
-  text-align:center;
-  margin-top:60px;
-  padding:20px 0;
-  border-top:3px solid #d4c45a;
-  border-bottom:3px solid #d4c45a;
-  font-size:18px;
-  letter-spacing:1px;
+.materia-image img{
+  width:100%;
+  border-radius:8px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-  .pedido-content{
+  .materia-content{
     flex-direction:column;
-    text-align:center;
   }
 
-  .pedido-text li{
-    text-align:left;
-  }
-
-  .title-line h2{
-    font-size:20px;
+  .materia-title{
+    font-size:22px;
   }
 }
 </style>
@@ -127,7 +129,7 @@
   <div class="header-container">
 
     <div class="logo-container">
-      <img src="../logotipos/LOGO BRANCO COM TEXTO.png" class="logo">
+      <img src="../QDelicioso-Website/logotipos/LOGO BRANCO COM TEXTO.png" class="logo">
     </div>
 
     <div class="header-right">
@@ -155,38 +157,56 @@
   </div>
 </header>
 <div class="content">
-<section class="pedido">
+<section class="materia">
 
   <!-- TÍTULO -->
-  <div class="title-line">
-    <span></span>
-    <h2>DIGA-NOS O QUE PRECISA, NÓS REALIZAMOS</h2>
-    <span></span>
-  </div>
+  <h1 class="materia-title">
+    MATÉRIA-PRIMA DE QUALIDADE, TRATADA COM RIGOR
+  </h1>
 
-  <div class="pedido-content">
+  <div class="materia-content">
 
-    <!-- TEXTO -->
-    <div class="pedido-text">
-      <ul>
-        <li>TIPO DE PRODUTO</li>
-        <li>FORMATO DESEJADO</li>
-        <li>QUANTIDADE POR EMBALAGEM</li>
-        <li class="sub">60G A 3KG</li>
-        <li>FREQUÊNCIA DE ENTREGA</li>
-      </ul>
+    <!-- LADO ESQUERDO -->
+    <div class="materia-text">
+
+      <!-- CHARCUTARIA -->
+      <div class="block">
+        <div class="block-title">
+          <span></span>
+          <h3>CHARCUTARIA</h3>
+          <span></span>
+        </div>
+
+        <p>
+          PRESUNTO • VENTRICINA • PAIO • FIAMBRE • MORTADELA
+        </p>
+        <p>
+          <b>ENCHIDOS TRADICIONAIS:</b> FARINHEIRA • MORCELA • PAIOLA • CHOURIÇO • CHOURIÇÃO
+        </p>
+      </div>
+
+      <!-- QUEIJOS -->
+      <div class="block">
+        <div class="block-title">
+          <span></span>
+          <h3>QUEIJOS</h3>
+          <span></span>
+        </div>
+
+        <ul>
+          <li>• QUEIJOS REGIONAIS PORTUGUESES</li>
+          <li>• QUEIJO BARRA</li>
+          <li>• OUTROS</li>
+        </ul>
+      </div>
+
     </div>
 
-    <!-- IMAGEM -->
-    <div class="pedido-image">
-      <img src="../Images/processo.png" alt="">
+    <!-- LADO DIREITO -->
+    <div class="materia-image">
+      <img src="../QDelicioso-Website/Images/tabua frios.png" alt="">
     </div>
 
-  </div>
-
-  <!-- FRASE FINAL -->
-  <div class="pedido-footer">
-    CONTRATUALIZE E GARANTA AS QUANTIDADES QUE PRECISA AO SEU TEMPO
   </div>
 
 </section>

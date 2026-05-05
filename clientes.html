@@ -9,113 +9,106 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../QDelicioso-Website/css/styles.css">
 <style>
 
-/* SECTION BASE */
+/* SECTION */
 .content{
-  display: flex;
   justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
 }
-.materia{
+
+.confianca{
   padding:80px 20px;
+  text-align:center;
   max-width: 80%;
 }
 
 /* TÍTULO */
-.materia-title{
-  text-align:center;
-  font-size: 36px;
-  font-weight: 300;
+.confianca-title{
+  font-size:42px;
+  font-weight:300;
   letter-spacing:2px;
-  margin-bottom:40px;
+  margin-bottom:50px;
   position:relative;
 }
 
-.materia-title::after{
+.confianca-title::after{
   content:"";
   display:block;
-  width:100%;
   height:3px;
   background:#d4c45a;
-  margin-top:15px;
+  margin:15px auto 0;
+  width:100%;
 }
 
-/* LAYOUT */
-.materia-content{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:60px;
+/* GRID */
+.confianca-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:50px;
   max-width:1200px;
   margin:0 auto;
 }
 
-/* TEXTO */
-.materia-text{
-  flex:1;
+/* CARD */
+.card{
+  text-align:left;
 }
 
-/* BLOCO */
-.block{
-  margin-bottom:40px;
-}
-
-/* TÍTULO COM LINHAS */
-.block-title{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  margin-bottom:15px;
-}
-
-.block-title span{
-  flex:1;
-  height:2px;
-  background:#d4c45a;
-}
-
-.block-title h3{
-  font-size:18px;
-  letter-spacing:2px;
-}
-
-/* TEXTO */
-.block p{
-  color:#6f8f6b;
-  margin:10px 0;
-  line-height:1.6;
-}
-
-/* LISTA */
-.block ul{
-  list-style:none;
-  margin-top:10px;
-}
-
-.block li{
-  color:#6f8f6b;
-  margin:8px 0;
-}
-
-/* IMAGEM */
-.materia-image{
-  flex:1;
-}
-
-.materia-image img{
+.card img{
   width:100%;
-  border-radius:8px;
+  height: 90%;
+  border-radius:10px;
+  display:block;
+}
+
+/* TEXTO */
+.card p{
+  margin-top:10px;
+  font-size:14px;
+  color:#6f8f6b;
+  letter-spacing:1px;
+  position:relative;
+}
+
+/* LINHA AMARELA */
+.card p::after{
+  content:"";
+  display:block;
+  width:60%;
+  height:3px;
+  background:#d4c45a;
+  margin-top:5px;
+}
+
+.cta-bar{
+  background:#6f8f6b;
+  padding:15px 0;
+  margin:40px auto 0;
+  border-top:5px solid #d4c45a;
+  border-bottom:5px solid #d4c45a;
+  max-width:80%;
+}
+
+.cta-bar a{
+  color:white;
+  text-decoration:none;
+  font-size:24px;
 }
 
 /* MOBILE */
-@media(max-width:768px){
-  .materia-content{
-    flex-direction:column;
+@media(max-width:900px){
+  .confianca-grid{
+    grid-template-columns: 1fr 1fr;
   }
+}
 
-  .materia-title{
-    font-size:22px;
+@media(max-width:600px){
+  .confianca-grid{
+    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -127,9 +120,8 @@
 
 <header>
   <div class="header-container">
-
     <div class="logo-container">
-      <img src="../logotipos/LOGO BRANCO COM TEXTO.png" class="logo">
+      <img src="../QDelicioso-Website/logotipos/LOGO BRANCO COM TEXTO.png" class="logo" />
     </div>
 
     <div class="header-right">
@@ -146,65 +138,46 @@
         <a href="produtos.html">Produtos</a>
         <a href="servicos.html">Serviços</a>
         <a href="clientes.html">Clientes</a>
-        <a href="contactos.html">Contactos</a>        
+        <a href="contactos.html">Contactos</a>
       </nav>
     </div>
 
     <div class="menu-toggle" onclick="openMenu()">
       <i class="fa-solid fa-bars"></i>
     </div>
-
   </div>
 </header>
 <div class="content">
-<section class="materia">
+<section class="confianca">
 
   <!-- TÍTULO -->
-  <h1 class="materia-title">
-    MATÉRIA-PRIMA DE QUALIDADE, TRATADA COM RIGOR
-  </h1>
+  <h2 class="confianca-title">CONFIANÇA CONSTRUÍDA</h2>
 
-  <div class="materia-content">
+  <div class="confianca-grid">
 
-    <!-- LADO ESQUERDO -->
-    <div class="materia-text">
-
-      <!-- CHARCUTARIA -->
-      <div class="block">
-        <div class="block-title">
-          <span></span>
-          <h3>CHARCUTARIA</h3>
-          <span></span>
-        </div>
-
-        <p>
-          PRESUNTO • VENTRICINA • PAIO • FIAMBRE • MORTADELA
-        </p>
-        <p>
-          <b>ENCHIDOS TRADICIONAIS:</b> FARINHEIRA • MORCELA • PAIOLA • CHOURIÇO • CHOURIÇÃO
-        </p>
-      </div>
-
-      <!-- QUEIJOS -->
-      <div class="block">
-        <div class="block-title">
-          <span></span>
-          <h3>QUEIJOS</h3>
-          <span></span>
-        </div>
-
-        <ul>
-          <li>• QUEIJOS REGIONAIS PORTUGUESES</li>
-          <li>• QUEIJO BARRA</li>
-          <li>• OUTROS</li>
-        </ul>
-      </div>
-
+    <div class="card">
+      <img src="../QDelicioso-Website/Images/cadeia hoteleira.png">
+      <p>CADEIAS HOTELEIRAS</p>
     </div>
 
-    <!-- LADO DIREITO -->
-    <div class="materia-image">
-      <img src="../Images/tabua frios.png" alt="">
+    <div class="card">
+      <img src="../QDelicioso-Website/Images/padarias e pastelaria.png">
+      <p>PADARIAS E PASTELARIAS ESPECIALIZADAS</p>
+    </div>
+
+    <div class="card">
+      <img src="../QDelicioso-Website/Images/restauracao.png">
+      <p>RESTAURAÇÃO</p>
+    </div>
+
+    <div class="card">
+      <img src="../QDelicioso-Website/Images/redes supermercados.png">
+      <p>REDES DE SUPERMERCADOS</p>
+    </div>
+
+    <div class="card">
+      <img src="../QDelicioso-Website/Images/marca propria.png">
+      <p>DISTRIBUIÇÃO E CANAL MODERNO</p>
     </div>
 
   </div>
